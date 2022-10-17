@@ -1,0 +1,137 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 200;
+}
+.section {
+  margin: 100px 0 /* внешние отступы для блока - сверху и снизу по 60px, слева и справа по 0px */;
+}
+.container {
+  max-width: 1376px /* максимальная ширина контейнера */;
+  margin: 0 auto /* расположение контейнера по центру */;
+  padding: 0 70px /* внутренние отступы слева и справа по 30px, верхний и нижний отступы по 0px */;
+}
+.catalog__flex {
+  display: flex /* по умолчанию дочерние блоки(.catalog__col) будут располагаться в ряд */;
+  flex-wrap: wrap /* дочерние блоки переносятся на следующую строку, если ширина всех внутренних блоков превышает ширину родительского блока(.catalog__flex) */;
+  margin: 0 -50px -30px /* Отрицательные внешние отступы(значения противоположные значениям padding блока .catalog__col), чтобы компенсировать внутренние отступы дочерних блоков(.catalog__col), НЕ ДОЛЖЕН превышать боковых значений padding блока .container*/;
+}
+.catalog__col {
+  width: 45% /* Задаем ширину блока(по 4 блока в ряд)*/;
+  padding: 0 60px 20px /* Размер внутренних отступов блока - справа и слева по 15px(которые дают общий отступ 30px между блоками) и снизу отступ 30px */;
+}
+/*
+.det{
+  
+  border: purple;
+  border-radius: 30px;
+  background-color: #d93aee;
+  width: 26.83px;
+  height: 102px;
+}
+*/
+.line10{
+  border: center;
+  position: static;
+  width: 100px;
+  max-height: 10px;
+  margin-left: 45%;
+}
+.hr{
+  border-color: linear-gradient(90deg, #6F0FBA 15%, rgba(111, 15, 186, 0.6) 97%);
+
+}
+.rect{
+  z-index: 10;
+  position: absolute;
+width: 26.83px;
+height: 102px;
+left: 0px;
+top: 138.5px;
+margin-top: -29%;
+
+/* gradient */
+
+background: linear-gradient(90deg, #6F0FBA 15%, rgba(111, 15, 186, 0.6) 97%);
+border-radius: 20px 0px 0px 20px;
+}
+.price{
+  font-style: italic;
+  font-weight:bold;
+  text-align: justify;
+  width: 200px;
+  height: 45px;
+  margin-left: 60%;
+  margin-right: auto;
+  background: linear-gradient(90deg, #6F0FBA 15%, rgba(111, 15, 186, 0.6) 97%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+.txt{
+  font-size: small;
+}
+.det{
+  margin-top: 5%;
+  width: 360px;
+  height: 38px;
+}
+.card {
+  position:static;
+  border: 2px solid #d93aee;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 15px rgba(33,37,41,0.1);
+  transition: all 0.3s ease;
+  width: 480px;
+  height: 102px;
+}
+.card:hover {
+  background-color: rgb(253, 228, 248);
+  box-shadow: 0 0 5px rgba(33,37,41,0.1);
+}
+.card__title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.container{
+    background-color: #E6E6E6;
+}
+.container2{
+  width: 1300px;
+  height: 100px;
+}
+
+.h1
+{
+  text-align: center;
+  position: static;
+  font-weight:bold;
+  font-size: large;
+  margin-top: 12%;
+  margin-right: 4%;
+}
+
+
+/* Адаптивность */
+@media (max-width: 1376.98px) {
+  .catalog__col {
+    width: 48.333333333% /* при ширине браузера меньше 1200px будет по 3 блока в ряд */;
+  }
+}
+@media (max-width: 991.98px) {
+  .catalog__col {
+    width: 60% /* при ширине браузера меньше 992px будет по 2 блока в ряд */;
+  }
+}
+@media (max-width: 575.98px) {
+  .catalog__col {
+    width: 100% /* при ширине браузера меньше 576px будет по 1 блоку */;
+  }
+}
